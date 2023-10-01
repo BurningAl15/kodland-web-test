@@ -129,7 +129,7 @@ button {
   width: 100%;
   margin: 0 auto;
 
-  background-image: url(../images/background.png);
+  background-image: url("../images/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,7 +144,7 @@ button {
 }
 
 .header__hero:hover {
-  background-image: url(../images/background2.png);
+  background-image: url("../images/background2.png");
 }
 
 .header__text__container {
@@ -282,7 +282,7 @@ button {
   margin: 0 auto;
   padding: 0 0 5rem 0;
 
-  background-image: url(../images/bg-grid.png);
+  background-image: url("../images/bg-grid.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -297,7 +297,7 @@ button {
 }
 
 .benefits:hover {
-  background-image: url(../images/bg-grid2.png);
+  background-image: url("../images/bg-grid2.png");
 }
 
 .benefits__description {
