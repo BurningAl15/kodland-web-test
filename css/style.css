@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "AR One Sans", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
+  list-style: none;
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: calc(100% - 2.5rem);
+
+  width: 100%;
+  margin: 0 auto;
+
+  --green-color: #cbf3f0;
+  --footer-color: #333333;
+  --white-color: #ffffff;
+  --yellow-color: #ffbf69;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Header */
+.header {
+  position: relative;
+}
+
+.header__nav__pc {
+  display: none;
+}
+
+#burger-menu {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border: 3px solid var(--footer-color);
+  border-radius: 50%;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--white-color);
+  transition: 0.3s;
+  z-index: 3;
+}
+
+#burger-menu span {
+  display: block;
+  width: 80%;
+  height: 5px;
+  background-color: var(--footer-color);
+  border-radius: 1.25rem;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+#burger-menu.open span:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#burger-menu.open span:last-child {
+  transform: rotate(-45deg) translate(9px, -10px);
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+#menu ul {
+  padding: 5rem 2rem;
+}
+
+#menu ul li {
+  border-radius: 1.25rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+#menu ul li a {
+  border-radius: 1.25rem;
+  margin-bottom: 1rem;
+  display: block;
+  padding: 1rem 2rem;
+  max-width: calc(100% - 4rem);
+  width: 100%;
+  background: rgba(51, 51, 51, 0.5);
+  color: var(--white-color);
+  font-size: 1.5rem;
+}
+
+#menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header__hero {
+  position: relative;
+  max-height: 750px;
+  height: 100%;
+  min-height: 750px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  background-image: url(/images/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__hero:hover {
+  background-image: url(/images/background2.png);
+}
+
+.header__text__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: calc(45% - 5rem);
+  padding-left: 5rem;
+}
+
+.header__text__container_title {
+  font-size: 7rem;
+  margin-bottom: 1rem;
+  color: var(--white-color);
+}
+
+.header__text__container_description {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  color: var(--white-color);
+}
+
+.header__text__container__button {
+  background: var(--green-color);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Section 1 */
+.main__description {
+}
+
+.main__description__container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.main__description__container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.main__description__container p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Section 2 */
+.main__products {
+  background-color: var(--green-color);
+}
+
+.main__products__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.products__card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.products__container__title {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.products__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.products__card img {
+  max-width: 7rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.products__card p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.products__card button {
+  background-color: var(--yellow-color);
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+}
+
+/* Section 3 */
+.main__benefits {
+  position: relative;
+  padding: 2.5rem 0 10rem 0;
+  margin: 5rem 0;
+}
+
+.benefits {
+  position: relative;
+  max-height: 150px;
+  min-height: 150px;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 5rem 0;
+
+  background-image: url(/images/bg-grid.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.benefits:hover {
+  background-image: url(/images/bg-grid2.png);
+}
+
+.benefits__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 4rem;
+}
+
+.benefits__description h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.benefits__description p {
+  text-align: center;
+}
+
+.benefits__image {
+  max-width: 50%;
+  width: 100%;
+  margin: auto;
+  /* margin-bottom: 2rem; */
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  margin: 0 auto;
+  background-color: var(--footer-color);
+  color: var(--white-color);
+  max-width: 100%;
+  width: 100%;
+}
+
+.footer__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: calc(100% - 5rem);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+}
+
+.footer__logo {
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+.footer__navbar li {
+  margin-bottom: 1rem;
+}
+
+.footer__link {
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+@media (min-width: 720px) {
+  body {
+    max-width: calc(85% - 2.5rem);
+  }
+
+  #burger-menu {
+    display: none;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .header__nav__pc {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(100% - 5rem);
+    width: 100%;
+    margin: 1.25rem 2.5rem 0 2.5rem;
+  }
+
+  .header__logo {
+    max-width: 20%;
+    width: 100%;
+  }
+
+  .header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 25%;
+    width: 100%;
+  }
+
+  .header__text__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: calc(45% - 5rem);
+    padding-left: 5rem;
+  }
+
+  .main__description__container {
+    max-width: 60%;
+  }
+
+  .products__card__container {
+    flex-direction: row;
+  }
+
+  .main__benefits {
+    padding: 0;
+    margin: 5rem 0;
+  }
+
+  .benefits {
+    flex-direction: row;
+    max-width: 100%;
+    max-height: 250px;
+    min-height: 250px;
+  }
+
+  .benefits__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 60%;
+    margin-bottom: 0rem;
+  }
+
+  .benefits__description h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .benefits__description p {
+    text-align: left;
+  }
+
+  .benefits__image {
+    max-width: 30%;
+    width: 100%;
+  }
+
+  .footer__navbar {
+    padding: 2rem 1rem;
+    flex-direction: row;
+  }
+
+  .footer__navbar li {
+    margin-bottom: 0rem;
+  }
+}
